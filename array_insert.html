@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Array Insert</title>
+</head>
+
+<body>
+  Hello
+  <script>
+    // let newEl = 25
+    // let position = 4
+    // console.warn(data)
+    // for (let i = data.length - 1; i >= 0; i--) {
+    //   if (i >= position) {
+    //     data[i + 1] = data[i]
+    //     if (i == position) {
+    //       data[i] = newEl
+    //     }
+    //   }
+    //   data[i + 1] = data[i]
+    //   console.log(data)
+    // }
+    function InsertEl() {
+      var data = [9, 45, 1, 4, 7, 5, 6]
+
+      const element = document.getElementById("element").value
+      const position = document.getElementById("position").value
+      if (element !== "" && position !== "") {
+        for (let i = data.length - 1; i >= 0; i--) {
+          if (i >= position) {
+            data[i + 1] = data[i]
+            if (i == position) {
+              data[i] = position
+            }
+          }
+        }
+        alert(data)
+
+      } else {
+        alert("Element and Position should not be empty")
+      }
+    }
+  </script>
+  <input type="text" placeholder="Enter Element" id="element" />
+  <input type="text" placeholder="Enter Position" id="position" />
+  <button onclick="InsertEl()">Insert</button>
+</body>
+
+</html>
