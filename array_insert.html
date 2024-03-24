@@ -27,18 +27,20 @@
     function InsertEl() {
       var data = [9, 45, 1, 4, 7, 5, 6]
 
-      const element = document.getElementById("element").value
+      let element = document.getElementById("element").value
+      element = parseInt(element)
       const position = document.getElementById("position").value
+      console.warn(data)
       if (element !== "" && position !== "") {
         for (let i = data.length - 1; i >= 0; i--) {
           if (i >= position) {
             data[i + 1] = data[i]
             if (i == position) {
-              data[i] = position
+              data[i] = element
             }
           }
         }
-        alert(data)
+        console.warn(data)
 
       } else {
         alert("Element and Position should not be empty")
