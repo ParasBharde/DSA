@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head></head>
+
+<body>
+  Stack HEre
+  <script>
+
+    let data = [];
+    let lengthOfArray = data.length
+    let maxLength = 10;
+
+    function push(val) {
+      if (lengthOfArray >= maxLength) {
+        alert("Stack is full can'tadd more" + val)
+      }
+      data[lengthOfArray] = val
+      lengthOfArray += 1
+    }
+
+    function pop() {
+      if (lengthOfArray !== 0) {
+        lengthOfArray -= 1
+        data.length = lengthOfArray
+      } else {
+
+        alert("Stack alrady empty")
+      }
+
+    }
+
+    push(2)
+    push(3)
+    push(4)
+    push(5)
+    push(6)
+    push(7)
+    push(8)
+    pop()
+    pop()
+    pop()
+    pop()
+    pop()
+    pop()
+    pop()
+    pop()
+
+
+    console.warn(data)
+  </script>
+</body>
+
+</html>
